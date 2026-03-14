@@ -1,50 +1,56 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<title>Happy Birthday طوبہ 🎂</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Magical Surprise for Tooba</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
-
 <body>
 
-<div id="balloon-container"></div>
+    <div id="interaction-viewer">
+        <button id="start-btn" onclick="startSequence()">Tooba, Click to Start the Magic</button>
+    </div>
 
-<div class="container">
+    <div id="flower-stage" class="hidden">
+        <svg id="rose-svg" viewBox="0 0 100 100" class="hidden-flower">
+            <defs>
+                <radialGradient id="roseGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ff4d6d" />
+                    <stop offset="100%" stop-color="#c9184a" />
+                </radialGradient>
+            </defs>
+            <path id="rose-stem" d="M50,100 Q50,70 50,50" stroke="#2d6a4f" stroke-width="3" fill="none" />
+            <g id="rose-petals" transform="translate(50, 50) scale(0)">
+                <ellipse cx="0" cy="-10" rx="10" ry="15" fill="url(#roseGradient)" />
+                <ellipse cx="0" cy="-10" rx="10" ry="15" fill="url(#roseGradient)" transform="rotate(72)" />
+                <ellipse cx="0" cy="-10" rx="10" ry="15" fill="url(#roseGradient)" transform="rotate(144)" />
+                <ellipse cx="0" cy="-10" rx="10" ry="15" fill="url(#roseGradient)" transform="rotate(216)" />
+                <ellipse cx="0" cy="-10" rx="10" ry="15" fill="url(#roseGradient)" transform="rotate(288)" />
+            </g>
+        </svg>
 
-<h1 id="title"></h1>
+        <svg id="sunflower-svg" viewBox="0 0 100 100" class="hidden-flower">
+            <path id="sunflower-stem" d="M50,100 Q50,75 50,60" stroke="#1e4620" stroke-width="4" fill="none" />
+            <g id="sunflower-head" transform="translate(50, 60) scale(0)">
+                <circle cx="0" cy="0" r="10" fill="#543a20" /> <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(45)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(90)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(135)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(180)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(225)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(270)" />
+                <ellipse cx="0" cy="-18" rx="5" ry="12" fill="#ffb703" transform="rotate(315)" />
+            </g>
+        </svg>
+    </div>
 
-<p class="quote">
-کچھ لوگ دنیا کو صرف اپنی موجودگی سے خوبصورت بنا دیتے ہیں،
-طوبہ ان ہی لوگوں میں سے ایک ہے 🌸
-</p>
+    <div id="final-message" class="hidden">
+        <h1 class="glow-text">Happy Birthday, Tooba!</h1>
+        <p>Wishing you a day as beautiful as these flowers.</p>
+    </div>
 
-<button onclick="celebrate()">🎁 سرپرائز دیکھیں</button>
-
-<div id="message" class="hidden">
-
-<h2>🎉 Happy Birthday طوبہ 🎉</h2>
-
-<p>
-
-اللَّهُمَّ بَارِكْ لَهَا فِي عُمُرِهَا  
-وَارْزُقْهَا السَّعَادَةَ وَالنَّجَاحَ  
-وَاجْعَلْ أَيَّامَهَا مَلِيئَةً بِالْفَرَحِ وَالْخَيْرِ  
-
-آمين 🤲
-
-</p>
-
-</div>
-
-</div>
-
-<canvas id="confetti"></canvas>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
