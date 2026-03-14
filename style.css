@@ -1,4 +1,5 @@
 body{
+
 margin:0;
 font-family:Arial;
 background:linear-gradient(120deg,#ff9a9e,#fad0c4);
@@ -8,21 +9,27 @@ justify-content:center;
 align-items:center;
 text-align:center;
 overflow:hidden;
+
 }
 
 .container{
+
 background:white;
 padding:40px;
 border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.2);
+max-width:600px;
+
 }
 
 h1{
+
 color:#ff4081;
-font-size:40px;
+
 }
 
 button{
+
 padding:12px 25px;
 border:none;
 background:#ff4081;
@@ -30,27 +37,88 @@ color:white;
 font-size:18px;
 border-radius:10px;
 cursor:pointer;
+
 }
 
 button:hover{
+
 background:#e73370;
+
 }
 
 .hidden{
+
 display:none;
+
 }
 
-#celebration{
-margin-top:20px;
-font-size:20px;
-color:#444;
+/* BALLOONS */
+
+.balloons{
+
+position:fixed;
+bottom:-150px;
+display:flex;
+gap:20px;
+
+}
+
+.balloon{
+
+width:50px;
+height:70px;
+background:red;
+border-radius:50%;
+animation:float 10s infinite;
+
+}
+
+.balloon:nth-child(2){
+
+background:blue;
+animation-duration:8s;
+
+}
+
+.balloon:nth-child(3){
+
+background:yellow;
+animation-duration:12s;
+
+}
+
+.balloon:nth-child(4){
+
+background:green;
+animation-duration:9s;
+
+}
+
+.balloon:nth-child(5){
+
+background:purple;
+animation-duration:11s;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-120vh);
+}
+
 }
 
 canvas{
+
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-pointer-events:none;
+
 }
