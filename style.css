@@ -3,10 +3,6 @@ body{
 margin:0;
 font-family:Arial;
 background:linear-gradient(120deg,#ff9a9e,#fad0c4);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
 text-align:center;
 overflow:hidden;
 
@@ -14,17 +10,29 @@ overflow:hidden;
 
 .container{
 
+margin-top:120px;
 background:white;
-padding:40px;
+padding:30px;
 border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
+width:80%;
 max-width:600px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
 
 }
 
 h1{
 
 color:#ff4081;
+font-size:40px;
+
+}
+
+.quote{
+
+font-size:20px;
+margin-bottom:20px;
 
 }
 
@@ -32,10 +40,10 @@ button{
 
 padding:12px 25px;
 border:none;
+border-radius:10px;
 background:#ff4081;
 color:white;
 font-size:18px;
-border-radius:10px;
 cursor:pointer;
 
 }
@@ -52,52 +60,16 @@ display:none;
 
 }
 
-/* BALLOONS */
-
-.balloons{
-
-position:fixed;
-bottom:-150px;
-display:flex;
-gap:20px;
-
-}
+/* balloons */
 
 .balloon{
 
 width:50px;
 height:70px;
-background:red;
 border-radius:50%;
-animation:float 10s infinite;
-
-}
-
-.balloon:nth-child(2){
-
-background:blue;
-animation-duration:8s;
-
-}
-
-.balloon:nth-child(3){
-
-background:yellow;
-animation-duration:12s;
-
-}
-
-.balloon:nth-child(4){
-
-background:green;
-animation-duration:9s;
-
-}
-
-.balloon:nth-child(5){
-
-background:purple;
-animation-duration:11s;
+position:absolute;
+bottom:-100px;
+animation:float 10s linear infinite;
 
 }
 
